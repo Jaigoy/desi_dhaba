@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-error-container": "#93000a", "on-tertiary": "#ffffff", "secondary-fixed-dim": "#ffba3b", "surface": "#fff8f6", "on-secondary": "#ffffff", "inverse-on-surface": "#ffede5", "on-secondary-container": "#6a4800", "primary-fixed": "#ffdad3", "primary-fixed-dim": "#ffb4a4", "tertiary-container": "#347219", "on-tertiary-container": "#aef58c", "on-primary-container": "#ffd9d2", "inverse-primary": "#ffb4a4", "primary": "#932008", "on-surface": "#28180f", "outline": "#8d716b", "secondary": "#7f5700", "on-tertiary-fixed": "#062100", "secondary-container": "#feb316", "tertiary-fixed": "#aff58c", "surface-container-lowest": "#ffffff", "on-primary-fixed-variant": "#8b1a03", "secondary-fixed": "#ffdead", "tertiary": "#1c5900", "surface-container-high": "#ffe2d5", "background": "#fff8f6", "on-primary-fixed": "#3e0500", "surface-variant": "#fbdcce", "surface-container-low": "#fff1eb", "on-error": "#ffffff", "primary-container": "#b5381f", "surface-bright": "#fff8f6", "on-tertiary-fixed-variant": "#1a5200", "on-secondary-fixed": "#281900", "outline-variant": "#e1bfb8", "surface-container-highest": "#fbdcce", "on-primary": "#ffffff", "error": "#ba1a1a", "inverse-surface": "#3e2c23", "surface-container": "#ffeae0", "surface-dim": "#f2d4c5", "on-background": "#28180f", "surface-tint": "#ad321a", "on-secondary-fixed-variant": "#604100", "error-container": "#ffdad6", "on-surface-variant": "#59413c", "tertiary-fixed-dim": "#94d873" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "gutter": "1.5rem", "space-md": "1rem", "gutter-mobile": "1rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "margin": "2.5rem" }, "fontFamily": { "body-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "label-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "display-hero-mobile": ["Playfair Display"], "display-hero": ["Playfair Display"], "headline-lg": ["Playfair Display"], "headline-md-mobile": ["Playfair Display"], "headline-md": ["Playfair Display"], "title-md": ["Plus Jakarta Sans"] }, "fontSize": { "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg-mobile": ["30px", { "lineHeight": "38px", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "display-hero-mobile": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "800" }], "display-hero": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-lg": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-md-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "700" }], "title-md": ["18px", { "lineHeight": "24px", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-inverse-surface/95 backdrop-blur-xl pt-safe shadow-[0_2px_12px_rgba(40,24,15,0.12)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="Desi Dhaba Faridabad Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VohTmkUd7uhtLvHeebPvOK-IJqVHuMWASqjS9jX-CCYeyQT3BPCPeq_Pzh0covQD-xdzfBp1-FSDwrn_P-xnK3mPaLF9H6oSbn2V2elTPh56GbCYdq6fiOWYBQNjzATXsZ1gh3DFpqCYrWrOrbJuzzQuJDUmyMnN9NVjLYpNaQ3KLOBXrS1dHbPGMIDjg3NYHw4INxLXiONAh8j8DwLCS4xTXE4ww_L-UUn_8QLo5M"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-surface font-bold leading-tight">Village Experience</span><span class="font-label-sm text-label-sm text-secondary-fixed tracking-wider uppercase">NH-19 Highway</span></div></div><div class="flex items-center gap-space-xs"><a class="h-11 px-space-sm bg-secondary-container hover:bg-secondary-fixed text-on-secondary-fixed font-label-lg text-label-lg rounded-full flex items-center gap-space-xs shadow-md active:scale-95 transition-all" href="tel:09711863639"><span class="material-symbols-outlined text-[20px]">call</span><span class="hidden xs:inline">Call Now</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><button aria-label="Open Menu" class="w-11 h-11 flex items-center justify-center text-surface-variant hover:text-surface active:scale-95 transition-transform" type="button"><span class="material-symbols-outlined text-[26px]">menu</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full">
+<!-- Phulkari Geometric Motif Ribbon -->
+<div class="w-full h-1.5 bg-gradient-to-r from-primary via-secondary-container to-primary flex">
+<div class="flex-1 opacity-60 bg-[repeating-linear-gradient(45deg,#932008,#932008_8px,#feb316_8px,#feb316_16px)]"></div>
+</div>
+<!-- Header Banner / Story Intro -->
+<section class="relative px-gutter-mobile pt-space-lg pb-space-md flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm uppercase tracking-widest">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">fireplace</span>
+        ढाबा दर्शन और माहौल
+      </span>
+<span class="text-outline text-label-sm font-label-sm">•</span>
+<span class="text-on-surface-variant text-label-sm font-label-sm">NH-19 Highway Milestone 42</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-headline-lg-mobile mt-1">
+      Step into Authentic Rural Punjab on Highway NH-19
+    </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+      Immerse your senses in smoky woodfires, rustic gao-takiya bolsters, live tandoor flames, and spirited hospitality beneath a canopy of starlit highway skies.
+    </p>
+<!-- Quick Stats Bento Strip -->
+<div class="grid grid-cols-3 gap-2 mt-space-sm pt-space-xs">
+<div class="flex flex-col items-center justify-center p-2.5 rounded-xl bg-surface-container shadow-sm text-center">
+<span class="font-title-md text-title-md text-primary font-bold">100%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pure Desi Ghee</span>
+</div>
+<div class="flex flex-col items-center justify-center p-2.5 rounded-xl bg-surface-container shadow-sm text-center">
+<span class="font-title-md text-title-md text-secondary font-bold">50+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Woven Charpais</span>
+</div>
+<div class="flex flex-col items-center justify-center p-2.5 rounded-xl bg-surface-container shadow-sm text-center">
+<span class="font-title-md text-title-md text-tertiary font-bold">Live</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Clay Chulhas</span>
+</div>
+</div>
+</section>
+<!-- Interactive Category Filter Chips -->
+<section class="sticky top-16 z-30 py-space-sm bg-surface/95 backdrop-blur-md px-gutter-mobile">
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 -mx-gutter-mobile px-gutter-mobile no-scrollbar" id="galleryFilterNav">
+<button class="filter-btn active-filter shrink-0 px-3.5 py-1.5 rounded-full font-label-lg text-label-lg transition-all shadow-sm bg-primary text-on-primary" data-filter="all" type="button">
+        All Moments
+      </button>
+<button class="filter-btn shrink-0 px-3.5 py-1.5 rounded-full font-label-lg text-label-lg transition-all shadow-sm bg-surface-container-high text-on-surface-variant hover:text-on-surface" data-filter="courtyard" type="button">
+        Charpai &amp; Courtyard
+      </button>
+<button class="filter-btn shrink-0 px-3.5 py-1.5 rounded-full font-label-lg text-label-lg transition-all shadow-sm bg-surface-container-high text-on-surface-variant hover:text-on-surface" data-filter="kitchen" type="button">
+        Live Tandoor &amp; Kitchen
+      </button>
+<button class="filter-btn shrink-0 px-3.5 py-1.5 rounded-full font-label-lg text-label-lg transition-all shadow-sm bg-surface-container-high text-on-surface-variant hover:text-on-surface" data-filter="events" type="button">
+        Family Events &amp; Dhol
+      </button>
+<button class="filter-btn shrink-0 px-3.5 py-1.5 rounded-full font-label-lg text-label-lg transition-all shadow-sm bg-surface-container-high text-on-surface-variant hover:text-on-surface" data-filter="night" type="button">
+        Night Ambiance
+      </button>
+</div>
+</section>
+<!-- Curated Visual Gallery -->
+<section class="px-gutter-mobile py-space-sm flex flex-col gap-space-md" id="galleryCardsGrid">
+<!-- Item 1: Open-air Courtyard Hero Card -->
+<div class="gallery-card group relative flex flex-col rounded-xl overflow-hidden bg-surface-container-lowest shadow-md transition-all duration-300 hover:shadow-xl" data-category="courtyard night">
+<div class="relative w-full h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Vibrant North Indian highway dhaba courtyard with hand-woven colorful rope charpais with red and mustard bolster pillows, traditional mud-plastered ochre walls, illuminated by warm string fairy lights wrapped around a sacred sprawling peepal tree at twilight with deep amber lantern glow and wooden low tables." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU53voPWEc6qOfWZ5DcHDqYV_wRUB1vBW2AZkjrpIBitg4qAhglMBeI3mY2re7ea5_TRB3hgL34C4oDxbuxP35mVwMCfGek1YKZX6JkGTcMi3NTEY1ulJLOMeoB2yifcjgtMyvhlrXvqxUhm7M6fBc8S10S46L3TAyZZt6RtqlcaO-kzjO69u1o2W2jrF3NsgacLnYFC0QIV1JsTkhi6OInKJ58qa1y1mUH7M1Iuc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/30 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-inverse-surface/75 backdrop-blur-sm text-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary-fixed">deck</span>
+          The Open Courtyard
+        </div>
+<div class="absolute bottom-3 left-3 right-3 text-surface">
+<p class="font-headline-sm text-headline-sm text-surface font-headline-sm leading-tight">Woven Charpais &amp; Peepal Chhaya</p>
+<p class="font-body-sm text-body-sm text-surface-variant line-clamp-1 mt-0.5">Mud-baked alcoves, fresh marigold garlands, and relaxing bolsters under twilight skies.</p>
+</div>
+</div>
+<div class="p-space-sm flex items-center justify-between bg-surface-container-low text-on-surface">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">flare</span>
+          Evening Baithak Setup
+        </span>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container text-primary font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-1" onclick="triggerPhotoModal(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span> View Detail
+        </button>
+</div>
+</div>
+<!-- Item 2: Live Tandoor & Master Ustad -->
+<div class="gallery-card group relative flex flex-col rounded-xl overflow-hidden bg-surface-container-lowest shadow-md transition-all duration-300 hover:shadow-xl" data-category="kitchen">
+<div class="relative w-full h-60 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Skilled Punjabi ustad tandoori chef tossing wide thin rumali roti dough high in midair against the intense amber glow of glowing charcoal and raging clay tandoor oven, sparks rising, authentic rustic highway kitchen atmosphere with polished brass ladles and smoke haze." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnjglKdysfN-6Z014Tr-tWAom4RPM3a7-8QNJsDd_JqLuRd1Dmrdeg8d-D6yHb0lc5pOG1-PUEL0ohfr3VT2QsxRx14ZVuxs9ChFViM1tRE5hY63DqqfK_prHoHCjglNxIhOUaEz9DQ_LcCSTCFU6tnX3zDiAOnBHbmHrQFmPRkLN6QVMQwaap9JM1iTGEuBpRDuGf9t-PxMHkg3lrCiueiL2XNLiGKhWaWkEFmAM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/90 text-on-primary font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+          Live Clay Oven
+        </div>
+<div class="absolute bottom-3 left-3 right-3 text-surface">
+<p class="font-headline-sm text-headline-sm text-surface font-headline-sm leading-tight">Flames &amp; Fresh Rumali Roti</p>
+<p class="font-body-sm text-body-sm text-surface-variant line-clamp-1 mt-0.5">Baked over screaming-hot inverted tawas and subterranean charcoal clay ovens.</p>
+</div>
+</div>
+<div class="p-space-sm flex items-center justify-between bg-surface-container-low text-on-surface">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">skillet</span>
+          Master Ustad at Work
+        </span>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container text-primary font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-1" onclick="triggerPhotoModal(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span> View Detail
+        </button>
+</div>
+</div>
+<!-- Item 3: Kulhad Chai & Malai Lassi -->
+<div class="gallery-card group relative flex flex-col rounded-xl overflow-hidden bg-surface-container-lowest shadow-md transition-all duration-300 hover:shadow-xl" data-category="courtyard kitchen">
+<div class="relative w-full h-60 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Handcrafted terracotta kulhad cups brimming with steaming hot aromatic spiced ginger cardamom tea, alongside tall hammered brass tumblers crowned with thick creamy dollops of pure malai lassi topped with saffron threads and crushed pistachios on a rustic rough-hewn wooden bench." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy56JS_lwsuAymMUT6JOjI7nV1qklLdJWQwAB-sDOpOpaqop8HlI8d_MlnZT8qJmOaNEZCR68F_ZzN-RWXLl5C-ZA7_oHgBwAXJp5oF2yZUT0pWoZq0Bgu1uemldOjYNZvHneqdboqrUggaddRzlXKCkBZVJwU-H9MsdU0ICbgtaJvU7WTSqKRI9d52Qii9HaZ5pzH9xJcI-bMKkg1XZYetye6AsODcoQXgXLiUn4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold shadow-sm">
+<span class="material-symbols-outlined text-[14px]">coffee</span>
+          Desi Swaad
+        </div>
+<div class="absolute bottom-3 left-3 right-3 text-surface">
+<p class="font-headline-sm text-headline-sm text-surface font-headline-sm leading-tight">Mitti Da Kulhad &amp; Malai Lassi</p>
+<p class="font-body-sm text-body-sm text-surface-variant line-clamp-1 mt-0.5">Freshly churned curd in brass tumblers and slow-simmered highway adrak chai.</p>
+</div>
+</div>
+<div class="p-space-sm flex items-center justify-between bg-surface-container-low text-on-surface">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">emoji_food_beverage</span>
+          Served 24/7 on NH-19
+        </span>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container text-primary font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-1" onclick="triggerPhotoModal(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span> View Detail
+        </button>
+</div>
+</div>
+<!-- Item 4: Punjabi Dhol & Live Folk Night -->
+<div class="gallery-card group relative flex flex-col rounded-xl overflow-hidden bg-surface-container-lowest shadow-md transition-all duration-300 hover:shadow-xl" data-category="events night">
+<div class="relative w-full h-60 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Joyful Punjabi folk artists in colorful embroidered pagri turbans vigorously playing traditional dhol drums in an outdoor dhaba garden illuminated by hanging antique lanterns, families smiling and clapping along in an energetic celebration at night." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKSraBEd8QElDZclUZHciNbjoj5t-sdp0wC8laaPVtsLOt2tXAY4Jvy3QEI_p0lwZ9TLh1pww34xsQdhevwGoh5rZm686u5hNM2FhbBmXL1fizTaYbTaI4EfdEA4eiFZVi468BKk79R73JFtuc2pRofoTzRHaoYT18ore6O36ea894LC6lEKjo9ltwQVFfQxyvfHrUQDDdu2Pj_8D96Dk3htzXATy66500cHOkMjU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary text-on-tertiary font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px]">music_note</span>
+          Weekend Jashn
+        </div>
+<div class="absolute bottom-3 left-3 right-3 text-surface">
+<p class="font-headline-sm text-headline-sm text-surface font-headline-sm leading-tight">Live Dhol &amp; Folk Raag</p>
+<p class="font-body-sm text-body-sm text-surface-variant line-clamp-1 mt-0.5">Every Friday and Saturday evening resonates with authentic Punjabi folk music.</p>
+</div>
+</div>
+<div class="p-space-sm flex items-center justify-between bg-surface-container-low text-on-surface">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">celebration</span>
+          Every Fri - Sun 7:30 PM
+        </span>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container text-primary font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-1" onclick="triggerPhotoModal(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span> View Detail
+        </button>
+</div>
+</div>
+<!-- Item 5: Grand Brass Thali & Handi Presentation -->
+<div class="gallery-card group relative flex flex-col rounded-xl overflow-hidden bg-surface-container-lowest shadow-md transition-all duration-300 hover:shadow-xl" data-category="kitchen">
+<div class="relative w-full h-60 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Lavish North Indian royal Highway Thali served on a heavy hammered brass plate with gleaming katoris of creamy Dal Makhani, Paneer Tikka Masala, fragrant Jeera Rice, pickled baby onions, piping hot stuffed Amritsari kulcha, and glistening handmade white butter makhan ball." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhQ27IjdCZttnGY3xiasxjgq7BkgRlTE-3F5RqRsZpTWnQFicAbZEyOkoIHURYVGV6MbL2xbv27D3UghXSywkNc1Z3RHchn5d8ruofizZTn9T4mME9qD1C9Fk6zskzqJCYEhvTODL01-QZbqF0LXCuLa_RWUwE90szd3nHqYSdaEbFYDOiD5aplpSLFWLctxl20xwlIHR26vKRZv5_PZSBD9PImErzfKZ6M4ORKFU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px]">dinner_dining</span>
+          Signature Feast
+        </div>
+<div class="absolute bottom-3 left-3 right-3 text-surface">
+<p class="font-headline-sm text-headline-sm text-surface font-headline-sm leading-tight">Pital Di Thali &amp; Handi Flavors</p>
+<p class="font-body-sm text-body-sm text-surface-variant line-clamp-1 mt-0.5">Served in vintage brass katoris with fresh churned white butter (safed makhan).</p>
+</div>
+</div>
+<div class="p-space-sm flex items-center justify-between bg-surface-container-low text-on-surface">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">restaurant</span>
+          Desi Highway Thali
+        </span>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container text-primary font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-1" onclick="triggerPhotoModal(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span> View Detail
+        </button>
+</div>
+</div>
+</section>
+<!-- Interactive Baithak Mood Selector (Mini delight interaction) -->
+<section class="px-gutter-mobile py-space-md">
+<div class="p-space-md rounded-2xl bg-surface-container flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">sunny</span>
+<span class="font-title-md text-title-md text-on-surface">Ambience Preview</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary text-label-sm font-label-sm">Interactive</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Toggle to see how our open-air courtyard transforms from sunlit brass afternoons to lantern-lit highway evenings.
+      </p>
+<div class="grid grid-cols-2 gap-2 mt-1">
+<button class="py-2.5 px-3 rounded-xl bg-surface-container-lowest text-primary font-label-lg text-label-lg shadow-sm flex items-center justify-center gap-2 transition-all" id="dayMoodBtn" onclick="toggleAmbienceMode('day')" type="button">
+<span class="material-symbols-outlined text-[18px]">wb_sunny</span>
+          Dophar Baithak
+        </button>
+<button class="py-2.5 px-3 rounded-xl bg-inverse-surface text-surface font-label-lg text-label-lg shadow-sm flex items-center justify-center gap-2 transition-all" id="nightMoodBtn" onclick="toggleAmbienceMode('night')" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary-container">nights_stay</span>
+          Raat Di Mehfil
+        </button>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-high text-on-surface text-body-sm font-body-sm transition-all duration-300" id="ambienceFeedback">
+        ✨ <strong>Evening Ambience:</strong> Fairy lights illuminate the peepal tree, warm fire pits are lit in winter, and brass hurricane lanterns rest beside every charpai.
+      </div>
+</div>
+</section>
+<!-- Village Experience Highlights Grid -->
+<section class="px-gutter-mobile py-space-md flex flex-col gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">The Real Dhaba Ethos</span>
+<h2 class="font-headline-md-mobile text-headline-md-mobile text-on-surface font-headline-md-mobile">
+        Experience Highlights
+      </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+        Designed for travelers seeking real hospitality, honest rustic recipes, and memorable family breaks.
+      </p>
+</div>
+<div class="grid grid-cols-1 gap-space-sm">
+<!-- Feature 1 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[26px]">outdoor_grill</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Slow-Fire Wood Chulhas</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Dal Makhani simmered for 16 hours over glowing hardwood coal embers, creating the legendary highway smoky profile.
+          </p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[26px]">water_drop</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">100% Pure Desi Ghee &amp; Makhan</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Sourced daily from local Haryana dairy farms. No vegetable oils or substitutes, only rich golden cow ghee.
+          </p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-tertiary text-on-tertiary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[26px]">chair</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Gao-Takiya Charpai Seating</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Traditional woven cots with deep-red cylindrical bolster pillows that let weary highway drivers stretch and dine in unhurried comfort.
+          </p>
+</div>
+</div>
+<!-- Feature 4 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest text-on-surface flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[26px] text-primary">toys</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Kids Play Lawn &amp; Sandpit</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            A secured, grassy garden patch with swings, mini tyre obstacle tracks, and safe open ground for children to recharge.
+          </p>
+</div>
+</div>
+<!-- Feature 5 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-inverse-surface text-surface flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[26px] text-secondary-container">local_parking</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Spacious 100+ Vehicle Highway Parking</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Well-lit, 24/7 guard-monitored driveway directly off NH-19 with EV charging points and clean driver resting facilities.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive 'Reserve a Charpai' CTA Card -->
+<section class="px-gutter-mobile py-space-md">
+<div class="relative overflow-hidden rounded-2xl bg-inverse-surface text-surface p-space-lg shadow-xl flex flex-col gap-space-md">
+<!-- Ambient Glow Behind CTA -->
+<div class="absolute -right-10 -bottom-10 w-44 h-44 rounded-full bg-primary/20 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-10 -top-10 w-44 h-44 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex p-2 rounded-xl bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[22px]">event_seat</span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">Fast Highway Reservation</span>
+<h3 class="font-headline-sm text-headline-sm text-surface font-bold leading-tight">Reserve Your Charpai</h3>
+</div>
+</div>
+<p class="font-body-md text-body-md text-surface-variant">
+        Driving down the Delhi-Agra Highway? Tell us your arrival time and group size. We'll have your charpai prepped with hot snacks and welcome kulhad chai!
+      </p>
+<!-- Instant Booking Inputs Form -->
+<div class="flex flex-col gap-space-xs">
+<div class="grid grid-cols-2 gap-2">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-surface-variant">Expected Arrival</label>
+<input class="w-full px-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:ring-2 focus:ring-secondary-container" id="bookingTime" type="time" value="20:00"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-surface-variant">Guests / Family</label>
+<select class="w-full px-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:ring-2 focus:ring-secondary-container" id="bookingGuests">
+<option value="2 Guests (1 Charpai)">2 Guests (1 Charpai)</option>
+<option selected="" value="4-5 Guests (2 Charpais)">4-5 Guests (Family)</option>
+<option value="6-10 Guests (Courtyard Row)">6-10 Guests (Large Group)</option>
+<option value="12+ Guests (Party Feast)">12+ Guests (Party)</option>
+</select>
+</div>
+</div>
+<button class="mt-space-xs w-full py-3.5 px-space-md rounded-xl bg-secondary-container hover:bg-secondary-fixed text-on-secondary-fixed font-label-lg text-label-lg shadow-lg flex items-center justify-center gap-2 active:scale-[0.98] transition-all" onclick="sendCharpaiWhatsAppBooking()" type="button">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+          Confirm Instant WhatsApp Booking
+        </button>
+</div>
+<!-- Quick Guarantee note -->
+<div class="flex items-center justify-center gap-3 pt-space-xs text-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-tertiary-fixed">check_circle</span>
+          No Advance Payment
+        </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-tertiary-fixed">bolt</span>
+          10-Min Confirmation
+        </span>
+</div>
+</div>
+</section>
+<!-- Photo Lightbox Modal Overlay (Micro-interaction) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/90 backdrop-blur-md hidden flex-col items-center justify-center p-gutter-mobile transition-opacity" id="photoModalOverlay">
+<div class="relative w-full max-w-sm rounded-2xl bg-surface p-space-md flex flex-col gap-space-sm shadow-2xl">
+<button class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg active:scale-90 transition-transform" onclick="closePhotoModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<div class="w-full h-48 rounded-xl overflow-hidden bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-outline text-[48px]">photo_library</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold" id="modalCaptionTitle">Rustic Highway Heritage</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1" id="modalCaptionBody">Every corner of Desi Dhaba Faridabad is styled to mirror the authentic roadside spirit of Punjab.</p>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg mt-1" onclick="closePhotoModal()" type="button">
+        Close Window
+      </button>
+</div>
+</div>
+<!-- Local Script for Gallery Filtering, Modal & Mood Toggles -->
+<script>
+    // Gallery Filtering Interaction
+    const filterButtons = document.querySelectorAll('#galleryFilterNav .filter-btn');
+    const galleryCards = document.querySelectorAll('#galleryCardsGrid .gallery-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Reset classes
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary', 'active-filter');
+          b.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+        });
+        // Activate current
+        btn.classList.add('bg-primary', 'text-on-primary', 'active-filter');
+        btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+
+        const filterValue = btn.getAttribute('data-filter');
+
+        galleryCards.forEach(card => {
+          const category = card.getAttribute('data-category') || '';
+          if (filterValue === 'all' || category.includes(filterValue)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Ambience Preview Toggle
+    function toggleAmbienceMode(mode) {
+      const dayBtn = document.getElementById('dayMoodBtn');
+      const nightBtn = document.getElementById('nightMoodBtn');
+      const feedback = document.getElementById('ambienceFeedback');
+
+      if (mode === 'day') {
+        dayBtn.className = 'py-2.5 px-3 rounded-xl bg-secondary-container text-on-secondary-container font-label-lg text-label-lg shadow-sm flex items-center justify-center gap-2 transition-all ring-2 ring-secondary';
+        nightBtn.className = 'py-2.5 px-3 rounded-xl bg-surface-container-lowest text-on-surface-variant font-label-lg text-label-lg shadow-sm flex items-center justify-center gap-2 transition-all';
+        feedback.innerHTML = '☀️ <strong>Daytime Baithak:</strong> Cool neem shade, refreshing buttermilk makkhan cups, and traditional wooden game boards under open Punjabi skies.';
+      } else {
+        nightBtn.className = 'py-2.5 px-3 rounded-xl bg-inverse-surface text-surface font-label-lg text-label-lg shadow-sm flex items-center justify-center gap-2 transition-all ring-2 ring-secondary-container';
+        dayBtn.className = 'py-2.5 px-3 rounded-xl bg-surface-container-lowest text-on-surface font-label-lg text-label-lg shadow-sm flex items-center justify-center gap-2 transition-all';
+        feedback.innerHTML = '✨ <strong>Evening Ambience:</strong> Fairy lights illuminate the peepal tree, warm fire pits are lit in winter, and brass hurricane lanterns rest beside every charpai.';
+      }
+    }
+
+    // Photo Modal Lightbox Trigger
+    function triggerPhotoModal(triggerEl) {
+      const card = triggerEl.closest('.gallery-card');
+      const title = card.querySelector('p.font-headline-sm')?.innerText || 'Dhāba Darshan';
+      const desc = card.querySelector('p.font-body-sm')?.innerText || 'Authentic highway experience.';
+      
+      document.getElementById('modalCaptionTitle').innerText = title;
+      document.getElementById('modalCaptionBody').innerText = desc;
+      const modal = document.getElementById('photoModalOverlay');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closePhotoModal() {
+      const modal = document.getElementById('photoModalOverlay');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Direct WhatsApp Charpai Booking Generator
+    function sendCharpaiWhatsAppBooking() {
+      const time = document.getElementById('bookingTime')?.value || '20:00';
+      const guests = document.getElementById('bookingGuests')?.value || '4-5 Guests';
+      const message = encodeURIComponent(`Sat Sri Akal Desi Dhaba! 🌾\nI would like to reserve a Charpai on NH-19.\n• Time: ${time}\n• Party Size: ${guests}\nPlease confirm availability.`);
+      window.open(`https://wa.me/919711863639?text=${message}`, '_blank');
+    }
+  </script>
+</div></main><div class="fixed bottom-24 right-4 z-50 flex items-center"><a class="relative group flex items-center justify-center w-14 h-14 rounded-full bg-tertiary text-on-tertiary shadow-[0_8px_20px_rgba(28,89,0,0.35)] active:scale-95 transition-all" href="https://wa.me/919711863639" rel="noopener noreferrer" target="_blank"><span class="absolute -inset-1 rounded-full bg-secondary-container/40 animate-ping pointer-events-none"></span><span class="material-symbols-outlined text-[28px]">chat</span></a></div><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-4px_16px_rgba(40,24,15,0.06)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center w-16 h-full text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">cottage</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center w-16 h-full text-on-surface-variant hover:text-primary transition-colors" data-path="full-menu" href="#"><span class="material-symbols-outlined text-[22px]">restaurant_menu</span><span class="font-label-sm text-label-sm mt-0.5">Menu</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-16 h-full transition-colors text-primary font-bold" data-path="village-experience" href="#"><span class="material-symbols-outlined text-[22px]">photo_camera</span><span class="font-label-sm text-label-sm mt-0.5">Gallery</span></a><a class="flex flex-col items-center justify-center w-16 h-full text-on-surface-variant hover:text-primary transition-colors" data-path="location-and-hours" href="#"><span class="material-symbols-outlined text-[22px]">near_me</span><span class="font-label-sm text-label-sm mt-0.5">Visit</span></a></div></nav></body></html>

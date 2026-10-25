@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-error-container": "#93000a", "on-tertiary": "#ffffff", "secondary-fixed-dim": "#ffba3b", "surface": "#fff8f6", "on-secondary": "#ffffff", "inverse-on-surface": "#ffede5", "on-secondary-container": "#6a4800", "primary-fixed": "#ffdad3", "primary-fixed-dim": "#ffb4a4", "tertiary-container": "#347219", "on-tertiary-container": "#aef58c", "on-primary-container": "#ffd9d2", "inverse-primary": "#ffb4a4", "primary": "#932008", "on-surface": "#28180f", "outline": "#8d716b", "secondary": "#7f5700", "on-tertiary-fixed": "#062100", "secondary-container": "#feb316", "tertiary-fixed": "#aff58c", "surface-container-lowest": "#ffffff", "on-primary-fixed-variant": "#8b1a03", "secondary-fixed": "#ffdead", "tertiary": "#1c5900", "surface-container-high": "#ffe2d5", "background": "#fff8f6", "on-primary-fixed": "#3e0500", "surface-variant": "#fbdcce", "surface-container-low": "#fff1eb", "on-error": "#ffffff", "primary-container": "#b5381f", "surface-bright": "#fff8f6", "on-tertiary-fixed-variant": "#1a5200", "on-secondary-fixed": "#281900", "outline-variant": "#e1bfb8", "surface-container-highest": "#fbdcce", "on-primary": "#ffffff", "error": "#ba1a1a", "inverse-surface": "#3e2c23", "surface-container": "#ffeae0", "surface-dim": "#f2d4c5", "on-background": "#28180f", "surface-tint": "#ad321a", "on-secondary-fixed-variant": "#604100", "error-container": "#ffdad6", "on-surface-variant": "#59413c", "tertiary-fixed-dim": "#94d873" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "gutter": "1.5rem", "space-md": "1rem", "gutter-mobile": "1rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "margin": "2.5rem" }, "fontFamily": { "body-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "label-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "display-hero-mobile": ["Playfair Display"], "display-hero": ["Playfair Display"], "headline-lg": ["Playfair Display"], "headline-md-mobile": ["Playfair Display"], "headline-md": ["Playfair Display"], "title-md": ["Plus Jakarta Sans"] }, "fontSize": { "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg-mobile": ["30px", { "lineHeight": "38px", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "display-hero-mobile": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "800" }], "display-hero": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-lg": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-md-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "700" }], "title-md": ["18px", { "lineHeight": "24px", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-inverse-surface/95 backdrop-blur-xl pt-safe shadow-[0_2px_12px_rgba(40,24,15,0.12)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="Desi Dhaba Faridabad Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VohTmkUd7uhtLvHeebPvOK-IJqVHuMWASqjS9jX-CCYeyQT3BPCPeq_Pzh0covQD-xdzfBp1-FSDwrn_P-xnK3mPaLF9H6oSbn2V2elTPh56GbCYdq6fiOWYBQNjzATXsZ1gh3DFpqCYrWrOrbJuzzQuJDUmyMnN9NVjLYpNaQ3KLOBXrS1dHbPGMIDjg3NYHw4INxLXiONAh8j8DwLCS4xTXE4ww_L-UUn_8QLo5M"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-surface font-bold leading-tight">Home</span><span class="font-label-sm text-label-sm text-secondary-fixed tracking-wider uppercase">NH-19 Highway</span></div></div><div class="flex items-center gap-space-xs"><a class="h-11 px-space-sm bg-secondary-container hover:bg-secondary-fixed text-on-secondary-fixed font-label-lg text-label-lg rounded-full flex items-center gap-space-xs shadow-md active:scale-95 transition-all" href="tel:09711863639"><span class="material-symbols-outlined text-[20px]">call</span><span class="hidden xs:inline">Call Now</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><button aria-label="Open Menu" class="w-11 h-11 flex items-center justify-center text-surface-variant hover:text-surface active:scale-95 transition-transform" type="button"><span class="material-symbols-outlined text-[26px]">menu</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Phulkari Decorative Geometric Accent Ribbon -->
+<div class="w-full h-1.5 bg-gradient-to-r from-primary via-secondary-container to-primary flex items-center justify-around opacity-90 overflow-hidden">
+<div class="w-2 h-2 rotate-45 bg-surface transform -translate-y-0.5"></div>
+<div class="w-2 h-2 rotate-45 bg-surface transform -translate-y-0.5"></div>
+<div class="w-2 h-2 rotate-45 bg-surface transform -translate-y-0.5"></div>
+<div class="w-2 h-2 rotate-45 bg-surface transform -translate-y-0.5"></div>
+<div class="w-2 h-2 rotate-45 bg-surface transform -translate-y-0.5"></div>
+</div>
+<!-- SECTION 1: Top Sticky Bar -->
+<aside class="sticky top-16 z-40 w-full bg-inverse-surface text-surface px-gutter-mobile py-2 shadow-md flex items-center justify-between transition-all backdrop-blur-md bg-opacity-95">
+<div class="flex items-center gap-space-xs">
+<img alt="Desi Dhaba Faridabad Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VohTmkUd7uhtLvHeebPvOK-IJqVHuMWASqjS9jX-CCYeyQT3BPCPeq_Pzh0covQD-xdzfBp1-FSDwrn_P-xnK3mPaLF9H6oSbn2V2elTPh56GbCYdq6fiOWYBQNjzATXsZ1gh3DFpqCYrWrOrbJuzzQuJDUmyMnN9NVjLYpNaQ3KLOBXrS1dHbPGMIDjg3NYHw4INxLXiONAh8j8DwLCS4xTXE4ww_L-UUn_8QLo5M"/>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed animate-pulse"></span>
+        Open 1 AM
+      </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<a class="h-9 px-3 rounded-full bg-secondary-container text-on-secondary-container font-label-lg text-label-lg flex items-center gap-1 shadow-sm active:scale-95 transition-transform font-bold" href="tel:09711863639">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>097118 63639</span>
+</a>
+<button aria-label="Toggle Quick Navigation" class="w-9 h-9 rounded-full bg-surface-container-highest/20 text-surface flex items-center justify-center active:bg-surface-container-highest/40" onclick="document.getElementById('dhaba-quick-toc').scrollIntoView({behavior: 'smooth'})" type="button">
+<span class="material-symbols-outlined text-[20px]">layers</span>
+</button>
+</div>
+</aside>
+<!-- SECTION 2: Atmospheric Hero Section -->
+<section class="relative w-full overflow-hidden text-surface">
+<!-- Atmospheric Ambient Highway Dhaba Backdrop -->
+<div class="relative w-full min-h-[500px] flex flex-col justify-end p-gutter-mobile bg-cover bg-center" data-alt="Warm rustic night view of highway Punjabi dhaba in India with traditional woven charpai cots, golden glowing hurricane lanterns, earthen handi pots, mud tandoor ovens billowing fragrant white smoke under wooden thatch pergola roof and twinkling warm fairy lights against deep midnight sky." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBUVp7jWa-28SIcMj4YqzcU6aquF-9_ZihhXoTt3flCrjQTwDnTQiAvXdzjxPkAj70e8PyU32VAQllOoI-ru6Es93kgbZrKPARdYuof1U8Uc5c08Ci4OABPNY86G_xJEXGJl3qGyeBz_tnwAIvzDkC5yfp_JksVNYYXKFUTDEiXlPf33_tMJIqWisS8o-mzlaf9KTuMSiytXlmOHnS6HgTu-u9PcDBp3wy7yxpyu1c')">
+<!-- Dark Clay & Smoke Gradient Scrim -->
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/75 to-inverse-surface/30"></div>
+<!-- Phulkari Border Tag -->
+<div class="relative z-10 flex items-center gap-2 mb-3">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-widest shadow-sm">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+          स्वाद पंजाब का
+        </span>
+<span class="text-secondary-fixed font-label-sm text-label-sm flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[15px]">location_on</span> NH-19 Highway
+        </span>
+</div>
+<!-- Bold Dual Language Headline -->
+<div class="relative z-10 flex flex-col gap-2">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-surface font-bold leading-tight drop-shadow-md">
+          असली देसी स्वाद,<br/>
+<span class="text-secondary-fixed italic font-normal">दिल से परोसा</span>
+</h1>
+<p class="font-body-md text-body-md text-surface-variant font-medium max-w-sm mt-1">
+          Village-style North Indian food • Pure ghee tandoori rotis • Open late till 1:00 AM on NH-19 Faridabad.
+        </p>
+</div>
+<!-- Dual Action CTAs -->
+<div class="relative z-10 grid grid-cols-2 gap-space-xs mt-6 mb-2">
+<a class="h-13 py-3 px-4 rounded-xl bg-secondary-container hover:bg-secondary-fixed text-on-secondary-container font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-lg active:scale-95 transition-all text-center font-bold" href="tel:09711863639">
+<span class="material-symbols-outlined text-[20px]">call</span>
+<span>Call Now</span>
+</a>
+<a class="h-13 py-3 px-4 rounded-xl bg-surface-container-lowest/15 backdrop-blur-md text-surface hover:bg-surface-container-lowest/25 font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all text-center font-semibold" href="#location-section">
+<span class="material-symbols-outlined text-[20px] text-secondary-fixed">navigation</span>
+<span>Directions</span>
+</a>
+</div>
+<!-- Subtle Brass Glow Element -->
+<div class="relative z-10 flex items-center justify-between pt-3 border-t-0 text-surface-dim font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary-fixed">deck</span> Traditional Charpai Seating</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary-fixed">local_cafe</span> Kulhad Tea &amp; Lassi</span>
+</div>
+</div>
+</section>
+<!-- SECTION 3: Quick Info Trust Strip -->
+<section class="w-full bg-surface-container-high px-gutter-mobile py-4 shadow-inner">
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar scroll-smooth py-1">
+<!-- Rating Badge -->
+<div class="flex-shrink-0 flex items-center gap-1.5 px-3 py-2 rounded-xl bg-surface-container-lowest text-on-surface shadow-sm">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container font-bold text-xs">★</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md leading-none font-bold">4.1</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant leading-tight">1,100+ Reviews</span>
+</div>
+</div>
+<!-- Cost Badge -->
+<div class="flex-shrink-0 flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-container-lowest text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">payments</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg leading-tight font-bold">₹200–400</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant leading-tight">Per Guest</span>
+</div>
+</div>
+<!-- Dining Services -->
+<div class="flex-shrink-0 flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-container-lowest text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">takeout_dining</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg leading-tight font-bold">Dine-in · Drive-thru</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant leading-tight">Contactless Takeaway</span>
+</div>
+</div>
+<!-- Midnight Timing Live Badge -->
+<div class="flex-shrink-0 flex items-center gap-2 px-3 py-2 rounded-xl bg-inverse-surface text-surface shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed animate-ping"></span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg leading-tight text-secondary-fixed font-bold">Open till 1:00 AM</span>
+<span class="font-label-sm text-[10px] text-surface-variant leading-tight">Highway Night Dining</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Our Signature Dishes (हवेली के ख़ास पकवान) -->
+<section class="w-full py-6 px-gutter-mobile flex flex-col gap-4" id="menu-dishes">
+<div class="flex items-end justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">dinner_dining</span> शेफ स्पेशल
+        </span>
+<h2 class="font-headline-md-mobile text-headline-md-mobile text-on-surface font-bold">Signature Dishes</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-2.5 py-1 rounded-full">
+        Slide →
+      </span>
+</div>
+<!-- Dish Carousel -->
+<div class="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth pb-2 pt-1">
+<!-- Dish 1: Paneer Takatak -->
+<article class="flex-shrink-0 w-64 rounded-2xl bg-surface-container-lowest shadow-md overflow-hidden flex flex-col">
+<div class="relative h-40 w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Sizzling authentic North Indian Paneer Takatak cooked on a giant flat iron dhaba tawa with charred capsicum, ripe tomatoes, diced cottage cheese, cracked black pepper, garnished with fresh coriander and julienned ginger." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAxU9EF7g9RHc4ixUq8SQJ2VTjomxQMVGV-2ocajRebRBw0CJ0oNiGDwxc9fkANSpgFfiEOxVwksyuJlERrCHbjTBLBh0cepfs35r31Fb-LR_kIgr_S7YtCfH0bMerSV79sOzq7yWoaSQYElHxFP3XRXL7ifbtLTDJ5QhYEgIV69mNtnNaaromfDXD9zNRNpFKu2-jIflR7w6uvZprGtIh3bH_CxwwQg6jlqDcqBXs')"></div>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-inverse-surface/80 backdrop-blur-sm text-surface font-label-sm text-[10px] flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> Veg
+          </span>
+<span class="absolute bottom-2 right-2 px-2 py-0.5 rounded-lg bg-secondary-container text-on-secondary-container font-label-lg text-label-lg font-bold shadow">
+            ₹280
+          </span>
+</div>
+<div class="p-3 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Paneer Takatak</h3>
+<span class="text-primary font-bold text-xs">🌶️ Spicy</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-1">
+              Sizzling spiced cottage cheese in heavy tawa masala with crunchy bell peppers.
+            </p>
+</div>
+<div class="mt-3 flex items-center justify-between pt-2">
+<span class="font-label-sm text-[11px] text-outline">Rich iron-tawa roast</span>
+<a class="h-8 px-3 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center gap-1 active:scale-95 transition-transform" href="tel:09711863639">
+<span class="material-symbols-outlined text-[15px]">add</span> Order
+            </a>
+</div>
+</div>
+</article>
+<!-- Dish 2: Paneer Tikka Masala -->
+<article class="flex-shrink-0 w-64 rounded-2xl bg-surface-container-lowest shadow-md overflow-hidden flex flex-col">
+<div class="relative h-40 w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Clay tandoor smoked Paneer Tikka Masala served in traditional Indian hammered copper handi with red buttery gravy, cream drizzle, charred cottage cheese cubes, and roasted onion petals on rustic wooden table." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDGw8hlW1EeTzSTypjzBIES7Os7yjKi0pBFEYLbqtOgzg_oAsFmRR6t59ciuN0lfDyRW5Gtpk1vzutmLdMDU9xINR3iMNmgh4X-jxwi-w0WCE_0X1_Hp9Gm3TUuT8M7KS_qXpLMfwkyOTfApyOF6-mNT9fyTT6VPKMVHHdF8iE8clCBNJJGyT0gwldBcDDzJQx7Zb6RF6ucSKHKXe8ybJQD-GB-Qdqyl91PW95ssZA')"></div>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-inverse-surface/80 backdrop-blur-sm text-surface font-label-sm text-[10px] flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> Veg
+          </span>
+<span class="absolute bottom-2 right-2 px-2 py-0.5 rounded-lg bg-secondary-container text-on-secondary-container font-label-lg text-label-lg font-bold shadow">
+            ₹310
+          </span>
+</div>
+<div class="p-3 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Paneer Tikka Masala</h3>
+<span class="text-secondary font-bold text-xs">⭐ Bestseller</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-1">
+              Clay oven charred cubes simmered in velvety highway onion-tomato gravy.
+            </p>
+</div>
+<div class="mt-3 flex items-center justify-between pt-2">
+<span class="font-label-sm text-[11px] text-outline">Slow cooked coal flavor</span>
+<a class="h-8 px-3 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center gap-1 active:scale-95 transition-transform" href="tel:09711863639">
+<span class="material-symbols-outlined text-[15px]">add</span> Order
+            </a>
+</div>
+</div>
+</article>
+<!-- Dish 3: Shahi Punjabi Thali -->
+<article class="flex-shrink-0 w-64 rounded-2xl bg-surface-container-lowest shadow-md overflow-hidden flex flex-col">
+<div class="relative h-40 w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Royal North Indian Shahi Thali spread with black Dal Makhani, Shahi Paneer with yellow gravy, golden Jeera Rice, crispy Papad, hot Butter Naan with melted butter, Boondi Raita, and warm dark Gulab Jamun." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCmSN5333hKyKK4aqj-vRd8dOIw5sS0ZYs_QlVmjYNsbQVfLezgUs9bNE74p__kPO3XbS2xwcqb-oHZMWEhyMz19AheElgtErlm8I6SUsz-ES4HG6aujBGvpQK340GhXNI1QhZtzJUsyqqbxwNjL52fQthu-C212-2lfOtRswk_taGLQdia3cdiobqhgWbMH5beghfzdXHEaDWgRd9atQdI2NRDPeaa9kexkaEnuEw')"></div>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-[10px] font-bold">
+            Full Meal
+          </span>
+<span class="absolute bottom-2 right-2 px-2 py-0.5 rounded-lg bg-secondary-container text-on-secondary-container font-label-lg text-label-lg font-bold shadow">
+            ₹360
+          </span>
+</div>
+<div class="p-3 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Shahi Punjabi Thali</h3>
+<span class="text-tertiary font-bold text-xs">👑 Grand</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-1">
+              Dal Makhani, Shahi Paneer, Raita, Jeera Rice, 2 Butter Naan &amp; Gulab Jamun.
+            </p>
+</div>
+<div class="mt-3 flex items-center justify-between pt-2">
+<span class="font-label-sm text-[11px] text-outline">Complete highway feast</span>
+<a class="h-8 px-3 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center gap-1 active:scale-95 transition-transform" href="tel:09711863639">
+<span class="material-symbols-outlined text-[15px]">add</span> Order
+            </a>
+</div>
+</div>
+</article>
+<!-- Dish 4: Crispy Corn -->
+<article class="flex-shrink-0 w-64 rounded-2xl bg-surface-container-lowest shadow-md overflow-hidden flex flex-col">
+<div class="relative h-40 w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Appetizing bowl of crunchy golden highway crispy sweet corn tossed with freshly slit green chillies, chopped red onion, lemon wedges, and Indian chaat masala in rustic terracotta plate." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAn5tJl_kEH3ePUQJdF7CSQYjpvJriOndwgjgFG2t6fl4GUoIFw1G_wC6Kp64suWGLpaa4DcN4RPDu3uh4jHLf769FcwxIrUNboEBbKht4mSYAezNoKX8DQgpUKcY2FXMuM4L8yimbwfkIZs94h_ZpjOoLFbA1XXwkUhM8i5UodVZ9kVt7W2uRTkHptlLy85X1Xmdi7PmBfVPJFN6XvV-D1AUbuuDd3KuMvVIpy36A')"></div>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-inverse-surface/80 backdrop-blur-sm text-surface font-label-sm text-[10px] flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> Veg
+          </span>
+<span class="absolute bottom-2 right-2 px-2 py-0.5 rounded-lg bg-secondary-container text-on-secondary-container font-label-lg text-label-lg font-bold shadow">
+            ₹220
+          </span>
+</div>
+<div class="p-3 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Crispy Corn Chaat</h3>
+<span class="text-secondary font-bold text-xs">🍋 Tangy</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-1">
+              Crunchy sweet corn wok-tossed with fresh green chillies and lemon zest.
+            </p>
+</div>
+<div class="mt-3 flex items-center justify-between pt-2">
+<span class="font-label-sm text-[11px] text-outline">Perfect with hot tea</span>
+<a class="h-8 px-3 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center gap-1 active:scale-95 transition-transform" href="tel:09711863639">
+<span class="material-symbols-outlined text-[15px]">add</span> Order
+            </a>
+</div>
+</div>
+</article>
+<!-- Dish 5: Paneer Chilli -->
+<article class="flex-shrink-0 w-64 rounded-2xl bg-surface-container-lowest shadow-md overflow-hidden flex flex-col">
+<div class="relative h-40 w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Indo Chinese Dhaba style Chilli Paneer with glazed wok-tossed cottage cheese cubes, spring onions, dark soya chili sauce, bell peppers, and toasted sesame seeds." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBNPBti3Mj_ah6rDoSrZ3mEoV8LGDf88d969RO9uQpw9ehg4nijD7ks17M5CLRAwgVqPhq9eBj2i7fAx7NElZCzYxrVvdevJr4bMY7RJfPRacD555GVbOtJGQxdWAYv-z9bUfNJfXBIbjQpmPYGSXYmLb9ZBpakqKguAEdemIZO1eFbK3Td1xDxPfo0W9wUYd8WOMmpla_QzVxPLnxP5c_896S055xuvxNoLiqTVek')"></div>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-inverse-surface/80 backdrop-blur-sm text-surface font-label-sm text-[10px] flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> Veg
+          </span>
+<span class="absolute bottom-2 right-2 px-2 py-0.5 rounded-lg bg-secondary-container text-on-secondary-container font-label-lg text-label-lg font-bold shadow">
+            ₹260
+          </span>
+</div>
+<div class="p-3 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Dhaba Paneer Chilli</h3>
+<span class="text-primary font-bold text-xs">🔥 Zing</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-1">
+              Desi wok tossed cottage cheese in garlic chili glaze and garden scallions.
+            </p>
+</div>
+<div class="mt-3 flex items-center justify-between pt-2">
+<span class="font-label-sm text-[11px] text-outline">Highway fusion snack</span>
+<a class="h-8 px-3 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center gap-1 active:scale-95 transition-transform" href="tel:09711863639">
+<span class="material-symbols-outlined text-[15px]">add</span> Order
+            </a>
+</div>
+</div>
+</article>
+<!-- Dish 6: Fragrant Jeera Rice -->
+<article class="flex-shrink-0 w-64 rounded-2xl bg-surface-container-lowest shadow-md overflow-hidden flex flex-col">
+<div class="relative h-40 w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Steaming hot fragrant long grain Basmati Jeera Rice tempered with desi cow ghee, roasted cumin seeds, fresh green coriander sprigs in traditional brass bowl." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqzXb769sIlVBk4IRGCKyS_nsXA2NKHYHDzaLutBSqQMYcgpMUSmS7o-GWvh3lIDXluwadXA4NXsCVZRn1wFTG2BdE25HAeusve1jwlRlGVi3jWrf_y9h1OHAjm2EbeNh6rVxPnsb3-DHFTfVTn92C6_XgsNgjvEDi-BVH_It_s12EVzJBwuqgpFCnAynrzzBZGawqgGYZ8t0u4H1Gwd0Z0yMz1k0p9Y6BgMjby-U')"></div>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-inverse-surface/80 backdrop-blur-sm text-surface font-label-sm text-[10px] flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> Veg
+          </span>
+<span class="absolute bottom-2 right-2 px-2 py-0.5 rounded-lg bg-secondary-container text-on-secondary-container font-label-lg text-label-lg font-bold shadow">
+            ₹180
+          </span>
+</div>
+<div class="p-3 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Fragrant Jeera Rice</h3>
+<span class="text-tertiary font-bold text-xs">🍚 Aromatic</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-1">
+              Premium Basmati tempered with golden cumin and pure countryside ghee.
+            </p>
+</div>
+<div class="mt-3 flex items-center justify-between pt-2">
+<span class="font-label-sm text-[11px] text-outline">Pair with Dal Makhani</span>
+<a class="h-8 px-3 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center gap-1 active:scale-95 transition-transform" href="tel:09711863639">
+<span class="material-symbols-outlined text-[15px]">add</span> Order
+            </a>
+</div>
+</div>
+</article>
+<!-- Dish 7: Golden Spring Rolls -->
+<article class="flex-shrink-0 w-64 rounded-2xl bg-surface-container-lowest shadow-md overflow-hidden flex flex-col">
+<div class="relative h-40 w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Golden crisp deep fried vegetable spring rolls cut diagonally showing shredded cabbage, carrots, bell peppers, served with sweet red chili garlic dip on leaf platter." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDBhX8_SP_BiT-j1GRsYdTDrdRGS83CG_qDVYTdmZE0Dp1WoPikLsnLU3aQZJC_tgE3QrobnUj2tnkZ0zGpKBvHKn6W_RDpAb81f3iRCvA8k-NN35czF2kqY8sec2O4YadNs5U4i6cH69tJD_4_VBSw5jVA_xp-ZSNBv7Tps90pGUyJHdgiE3JPnJ8O_gIPfLJghzYijfF6En5QryQftyafqNbYy-S3CdYLh7zC9gg')"></div>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-inverse-surface/80 backdrop-blur-sm text-surface font-label-sm text-[10px] flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> Veg
+          </span>
+<span class="absolute bottom-2 right-2 px-2 py-0.5 rounded-lg bg-secondary-container text-on-secondary-container font-label-lg text-label-lg font-bold shadow">
+            ₹190
+          </span>
+</div>
+<div class="p-3 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Golden Spring Rolls</h3>
+<span class="text-secondary font-bold text-xs">✨ Crispy</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-1">
+              Crisp rolls stuffed with crunchy wok vegetables and spicy ginger-soy dips.
+            </p>
+</div>
+<div class="mt-3 flex items-center justify-between pt-2">
+<span class="font-label-sm text-[11px] text-outline">Highway munching favorite</span>
+<a class="h-8 px-3 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center gap-1 active:scale-95 transition-transform" href="tel:09711863639">
+<span class="material-symbols-outlined text-[15px]">add</span> Order
+            </a>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- SECTION 5: The Dhaba Experience (गांव की चौपाल) -->
+<section class="w-full bg-inverse-surface text-surface py-8 px-gutter-mobile flex flex-col gap-5">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">cottage</span> असली पंजाबी खातिरदारी
+      </span>
+<h2 class="font-headline-md-mobile text-headline-md-mobile font-bold text-surface">
+        The Village Dhaba Experience
+      </h2>
+<p class="font-body-sm text-body-sm text-surface-variant mt-1 leading-relaxed">
+        Step away from artificial dining into pure rural warmth. At Desi Dhaba Faridabad, your meal is cooked over crackling coal firewood, served on woven charpais with dollops of handmade makkhan and heartfelt mehman-nawazi.
+      </p>
+</div>
+<!-- 2x2 Rustic Photo Grid -->
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Grid 1: Charpai Seating -->
+<div class="relative h-36 rounded-xl overflow-hidden bg-surface-container-highest/20 shadow">
+<div class="w-full h-full bg-cover bg-center" data-alt="Traditional Indian jute woven charpai bed cots set outdoors under night sky with colorful bolster cushions and low wooden tables at village dhaba." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA4THFL195-VCNehCkvzQsMs7sYX9w7WyTLKklinn1yoN94Zd6wBUadZxDm31rNDwdk3Ag5LFXZ_BJmJu4D0MDWsnKN7Ia3wpfvb0L3ebyA6AFW35Vr6el4tpzzHDOKKeYcOG7GPdOS6krBbya4sFX1ELw3zMKU0Z0w97tzjlCzA618buupFH_CQTakOYp4tZ1_0eOGOJKcSOMjziZpwjCZbqktm4uLwRDjW6BGIfg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-transparent to-transparent flex items-end p-2">
+<span class="font-label-sm text-surface font-semibold">चारपाई की चौपाल</span>
+</div>
+</div>
+<!-- Grid 2: Traditional Mud Tandoor -->
+<div class="relative h-36 rounded-xl overflow-hidden bg-surface-container-highest/20 shadow">
+<div class="w-full h-full bg-cover bg-center" data-alt="Traditional subterranean Punjabi clay mud tandoor oven glowing with orange red charcoal flames while a chef slaps whole wheat naan bread inside." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5Re4wMtx7psilRAyqFxZZFpviosroRvueLUGLgFC92kDfdNpaQFpfcUjNWsX8XdtkozfqB0ttG_gPPDzzqV0hqbR05QsAQe0_baWRE7BeFRESBy-fk2qZiobcL_U1WrbUWX-V_NEZuHsLR2zAsyx84GSUJPTRvsKZQPbfc_yVGW395zTMymYqdxR8PwvLr4g04QL-ANUKo7XEOhLxTsayUYm5po_pgpZugJ2oz64')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-transparent to-transparent flex items-end p-2">
+<span class="font-label-sm text-surface font-semibold">तंदूर की गरमाहट</span>
+</div>
+</div>
+<!-- Grid 3: Tall Brass Patiala Lassi -->
+<div class="relative h-36 rounded-xl overflow-hidden bg-surface-container-highest/20 shadow">
+<div class="w-full h-full bg-cover bg-center" data-alt="Extra tall traditional Indian brass Patiala lassi tumblers brimming with thick sweet curd lassi topped with thick cream malai and saffron threads." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMYl8LbVFeQC_zoQrOjSbJE4p-NRErH-4y0ODVt9JL4Q9avhpIMmEFwWuFqNeSkHxAikcDNQAiStVqiaUjDUHGD-7iLvG57RAw24EU5siNuo7SyApK_CGe2zqBZtZJ_wml3DaSlkQQJ1nAdeilaBrg4b4CHYg0TpZEEFRpJA5iAndgBIQUWXwaz2lVxcpnmlBEJmV5PxuSYtfizVdzwuIm8ANggfJTPlZP6_dkzqY')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-transparent to-transparent flex items-end p-2">
+<span class="font-label-sm text-surface font-semibold">पटियाला मलाई लस्सी</span>
+</div>
+</div>
+<!-- Grid 4: Lantern Ambiance -->
+<div class="relative h-36 rounded-xl overflow-hidden bg-surface-container-highest/20 shadow">
+<div class="w-full h-full bg-cover bg-center" data-alt="Handcrafted brass and clay hurricane lanterns hanging from wooden dhaba beams casting warm amber glow along rustic brick outdoor corridors." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGQ_yjs3VVYFipGdDoPfKHiZ3el88cTp8HbkLwz7VoR_NCw6VwLamN0PL055Af9nwpKK9VGDpHzPf-qkoQ5RZjGY-RFwOrx2oRt5CL9Do8RQBassVBwG80675GlVu_H2S0IvXo-ZaAV01bXWlNZUizwldXTUA_0RoIIOiiibY4zqlLW4e5PXwXGiPgOu9PPhxcK1BuWTD0KAMGz0hJ6YlAR3zmBYn020vwBYEq7iY')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-transparent to-transparent flex items-end p-2">
+<span class="font-label-sm text-surface font-semibold">लालटेन का सुकून</span>
+</div>
+</div>
+</div>
+<!-- Emotion Bullet Pills -->
+<div class="grid grid-cols-1 gap-2 pt-2">
+<div class="flex items-center gap-3 p-3 rounded-xl bg-surface-container-highest/10 backdrop-blur-sm">
+<div class="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center shrink-0 text-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]">outdoor_grill</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-surface">12-Hour Slow Coal Simmering</span>
+<span class="font-body-sm text-[12px] text-surface-variant">Our iconic Dal Makhani bubbles overnight on smoldering wood embers.</span>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-xl bg-surface-container-highest/10 backdrop-blur-sm">
+<div class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center shrink-0 text-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]">bakery_dining</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-surface">Desi White Butter (ताज़ा सफ़ेद मक्खन)</span>
+<span class="font-body-sm text-[12px] text-surface-variant">Fresh churned everyday, melting over crispy charred laccha parathas.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: Grand Punjabi Thali Spotlight -->
+<section class="w-full py-8 px-gutter-mobile bg-surface-container-low flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
+        द ढाबा किंग दावत
+      </span>
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold shadow-sm">
+        Dhaba King Feast • ₹360
+      </span>
+</div>
+<!-- Spotlight Hero Card -->
+<div class="relative w-full rounded-2xl overflow-hidden bg-surface-container-lowest shadow-lg">
+<div class="relative w-full h-56 bg-cover bg-center" data-alt="Grand Maharaja highway Punjabi Thali on rustic dark wood planks featuring steaming Dal Makhani with rich yellow churned butter dollop, rich Shahi Paneer, fragrant Jeera Basmati rice, vinegar baby shallots, whole green chillies, tandoori laccha paratha with visible layers, and a tall bronze glass of sweet thick Malai Lassi." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAvwx5JXzUaJ0rnuV-CiqqIbGvEXAWKOxgSmg2hEsaXH-svybsa7iEauZqU-lWAzXBNizb6ehogmpTJz3GNYCd2Jw0_d1g03nd391GoC6WRvOafzUhUPdv6keCVM6rx9Szh_Y_bC6LyZ6dNiPuaHktlkVMQz3bWnL5rKAYs2JU8yJTnaLVHSh6QjsaELPwxoQMT4SdH5hvVxxeHn-nq79S7AD8fvSK6jmh3VaS5Xw0')">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex items-end p-4">
+<div class="text-surface flex flex-col">
+<h3 class="font-headline-sm text-headline-sm font-bold leading-tight">Shahi Highway Thali</h3>
+<p class="font-body-sm text-[12px] text-surface-variant">The soul of Grand Trunk Road in one single brass platter</p>
+</div>
+</div>
+</div>
+<!-- Thali Component Breakdown Badges -->
+<div class="p-4 flex flex-col gap-3">
+<div class="grid grid-cols-2 gap-2 text-on-surface">
+<div class="flex items-center gap-1.5 p-2 rounded-lg bg-surface-container">
+<span class="material-symbols-outlined text-primary text-[18px]">soup_kitchen</span>
+<span class="font-label-sm text-label-sm font-semibold">Makkhan Dal Makhani</span>
+</div>
+<div class="flex items-center gap-1.5 p-2 rounded-lg bg-surface-container">
+<span class="material-symbols-outlined text-primary text-[18px]">set_meal</span>
+<span class="font-label-sm text-label-sm font-semibold">Creamy Shahi Paneer</span>
+</div>
+<div class="flex items-center gap-1.5 p-2 rounded-lg bg-surface-container">
+<span class="material-symbols-outlined text-primary text-[18px]">bakery_dining</span>
+<span class="font-label-sm text-label-sm font-semibold">2 Butter Tandoori Naan</span>
+</div>
+<div class="flex items-center gap-1.5 p-2 rounded-lg bg-surface-container">
+<span class="material-symbols-outlined text-primary text-[18px]">icecream</span>
+<span class="font-label-sm text-label-sm font-semibold">Warm Gulab Jamun (1 pc)</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">local_cafe</span>
+<span>+ Tall Bronze Glass Lassi Available</span>
+</div>
+<a class="h-10 px-5 rounded-full bg-secondary-container hover:bg-secondary-fixed text-on-secondary-container font-label-lg text-label-lg font-bold flex items-center gap-1 shadow active:scale-95 transition-all" href="tel:09711863639">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+<span>Order Thali ₹360</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: What Guests Say (मेहमानों की ज़ुबानी) -->
+<section class="w-full py-8 px-gutter-mobile flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
+          सच्चे अनुभव
+        </span>
+<h2 class="font-headline-md-mobile text-headline-md-mobile text-on-surface font-bold">
+          What Guests Say
+        </h2>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="text-secondary font-bold">★ 4.1</span> / 5.0
+      </div>
+</div>
+<!-- Review Horizontal Scroll Slider -->
+<div class="flex gap-3 overflow-x-auto no-scrollbar scroll-smooth pb-2 pt-1">
+<!-- Review 1 -->
+<div class="flex-shrink-0 w-72 p-4 rounded-2xl bg-surface-container-lowest shadow-md flex flex-col justify-between">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-1 text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic leading-relaxed">
+            “Best late-night stop on NH-19! We reached Faridabad at 12:30 AM starving after Delhi drive. Piping hot Dal Makhani and tandoori parathas on charpai were pure bliss.”
+          </p>
+</div>
+<div class="flex items-center gap-2.5 pt-3 mt-3 border-t-0 bg-surface-container-low p-2 rounded-xl">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xs">
+            RK
+          </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-sm font-bold text-on-surface">Rajesh Khatri</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Highway Traveler • Agra-Delhi</span>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="flex-shrink-0 w-72 p-4 rounded-2xl bg-surface-container-lowest shadow-md flex flex-col justify-between">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-1 text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic leading-relaxed">
+            “Paneer Takatak is outstanding! Super quick service even on Sunday evening. The open air village setup makes it so enjoyable for family and children.”
+          </p>
+</div>
+<div class="flex items-center gap-2.5 pt-3 mt-3 border-t-0 bg-surface-container-low p-2 rounded-xl">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-xs">
+            PS
+          </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-sm font-bold text-on-surface">Pooja Sharma</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Faridabad NIT Resident</span>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="flex-shrink-0 w-72 p-4 rounded-2xl bg-surface-container-lowest shadow-md flex flex-col justify-between">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-1 text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic leading-relaxed">
+            “Authentic desi ghee aroma. You won't find this taste in normal city AC restaurants. Kulhad chai and fresh makkhan naan will bring me back every time!”
+          </p>
+</div>
+<div class="flex items-center gap-2.5 pt-3 mt-3 border-t-0 bg-surface-container-low p-2 rounded-xl">
+<div class="w-8 h-8 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center font-bold text-xs">
+            AM
+          </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-sm font-bold text-on-surface">Amit Malik</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Food Vlogger</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8: Events & Family Gatherings -->
+<section class="w-full py-6 px-gutter-mobile">
+<div class="relative w-full rounded-2xl overflow-hidden bg-primary-container text-on-primary p-5 shadow-lg flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1 px-3 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">celebration</span> महफ़िल और जश्न
+        </span>
+<span class="font-label-sm text-label-sm text-primary-fixed">150+ Guests Capacity</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm font-bold leading-tight">
+          Celebrate at Desi Dhaba
+        </h3>
+<p class="font-body-sm text-body-sm text-on-primary-container leading-relaxed">
+          Host memorable Birthday Celebrations, Kitty Parties, Highway Family Reunions, or Wedding Catering with private charpai gazebos, live tandoor, and folk Punjabi music.
+        </p>
+</div>
+<!-- Event Perks Mosaic -->
+<div class="grid grid-cols-2 gap-2 text-on-primary">
+<div class="flex items-center gap-1.5 p-2 rounded-lg bg-surface-container-lowest/15 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">outdoor_grill</span>
+<span class="font-label-sm text-[11px] font-semibold">Live Live Tandoor Counters</span>
+</div>
+<div class="flex items-center gap-1.5 p-2 rounded-lg bg-surface-container-lowest/15 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">deck</span>
+<span class="font-label-sm text-[11px] font-semibold">Private Charpai Zones</span>
+</div>
+<div class="flex items-center gap-1.5 p-2 rounded-lg bg-surface-container-lowest/15 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">local_parking</span>
+<span class="font-label-sm text-[11px] font-semibold">Spacious Safe Parking</span>
+</div>
+<div class="flex items-center gap-1.5 p-2 rounded-lg bg-surface-container-lowest/15 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">music_note</span>
+<span class="font-label-sm text-[11px] font-semibold">Rustic Village Tunes</span>
+</div>
+</div>
+<a class="h-12 w-full rounded-xl bg-secondary-container hover:bg-secondary-fixed text-on-secondary-container font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow active:scale-95 transition-all text-center" href="tel:09711863639">
+<span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
+<span>Enquire for Event / Party</span>
+</a>
+</div>
+</section>
+<!-- SECTION 9: Location, Directions & Late-Night Hours -->
+<section class="w-full py-6 px-gutter-mobile bg-surface-container-low flex flex-col gap-4" id="location-section">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">pin_drop</span> रास्ता और समय
+      </span>
+<h2 class="font-headline-md-mobile text-headline-md-mobile text-on-surface font-bold">
+        NH-19 Location &amp; Directions
+      </h2>
+</div>
+<!-- Parchment Style Map Card -->
+<div class="w-full rounded-2xl bg-surface-container-lowest shadow-md overflow-hidden flex flex-col">
+<!-- Static Google Map Pipeline Trigger -->
+<div class="w-full h-52 bg-cover bg-center relative" data-location="30/30, NH-19, Near Khatu Shyam Mandir, Krishna Nagar, Faridabad, Haryana 121007" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDuMN19ylGgdBF242JE90oKZRKU3Z7iJD5UsFMTbYPM4jtC-8XhwzOIojI3hNwteXdsU2bCwidghGd8i0sNb8DGT5rq2-SeYE9cO5gUrLzIfHLh7PsBACalnumHm8P0Dg347lUO0deJJs75bt-i3yU45yf6jy0SEL-gvA4iA-c523f7s7i1nmxmZgfUEesuZgzyavGliHiwpY5JS4d8bPKLOrBonwSeMJ-KHcyDp7M')">
+<div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-inverse-surface/90 text-surface font-label-sm text-label-sm flex items-center gap-1.5 shadow">
+<span class="material-symbols-outlined text-secondary-fixed text-[16px]">navigation</span>
+<span>Highway Frontage NIT</span>
+</div>
+</div>
+<!-- Address & Navigation Actions -->
+<div class="p-4 flex flex-col gap-3">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">storefront</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-bold text-on-surface">देसी ढाबा (Desi Dhaba)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              30/30, NH-19, Opp. Thomson Press, Near Khatu Shyam Mandir, Krishna Nagar, New Industrial Township (NIT), Faridabad, Haryana 121007
+            </p>
+</div>
+</div>
+<div class="p-3 rounded-xl bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">schedule</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">11:00 AM – 1:00 AM Daily</span>
+<span class="font-label-sm text-[10px] text-tertiary font-semibold">Open 7 Days a Week (Highway Dine-in)</span>
+</div>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed animate-ping"></span>
+</div>
+<!-- Landmark Tip -->
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-high/60 text-on-surface-variant font-label-sm text-[12px]">
+<span class="material-symbols-outlined text-secondary text-[18px]">directions_car</span>
+<span>Easy dedicated highway service-lane slip road &amp; drive-thru counter</span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<a class="h-11 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-1.5 shadow active:scale-95 transition-all text-center" href="https://maps.google.com/?q=Desi+Dhaba+NH-19+Faridabad" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">near_me</span>
+<span>Google Maps</span>
+</a>
+<a class="h-11 rounded-xl bg-secondary-container text-on-secondary-container font-label-lg text-label-lg font-bold flex items-center justify-center gap-1.5 shadow active:scale-95 transition-all text-center" href="tel:09711863639">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>Tap to Call</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Anchors Drawer / Sheet Trigger Target -->
+<div class="px-gutter-mobile py-2 bg-surface" id="dhaba-quick-toc">
+<div class="p-3 rounded-xl bg-surface-container flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary">fastfood</span> Quick Highway Jump:
+      </span>
+<div class="flex items-center gap-2">
+<a class="px-2.5 py-1 rounded-md bg-surface-container-lowest text-primary font-bold" href="#menu-dishes">Menu</a>
+<a class="px-2.5 py-1 rounded-md bg-surface-container-lowest text-secondary font-bold" href="#location-section">Directions</a>
+<a class="px-2.5 py-1 rounded-md bg-secondary-container text-on-secondary-container font-bold" href="tel:09711863639">Dial</a>
+</div>
+</div>
+</div>
+<!-- SECTION 10: Authentic Dhaba Footer -->
+<footer class="w-full bg-inverse-surface text-surface pt-8 pb-10 px-gutter-mobile flex flex-col gap-6 mt-4">
+<!-- Decorative Truck-Art Inspired Floral Divider -->
+<div class="flex items-center justify-center gap-2 text-secondary-fixed opacity-75">
+<span>✦</span>
+<span class="w-16 h-0.5 bg-secondary-fixed/50"></span>
+<span class="font-headline-sm text-[16px] font-bold">देसी स्वाद, सच्चा प्यार</span>
+<span class="w-16 h-0.5 bg-secondary-fixed/50"></span>
+<span>✦</span>
+</div>
+<!-- Bilingual Branding & Address -->
+<div class="flex flex-col items-center text-center gap-2">
+<img alt="Desi Dhaba Logo" class="h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VohTmkUd7uhtLvHeebPvOK-IJqVHuMWASqjS9jX-CCYeyQT3BPCPeq_Pzh0covQD-xdzfBp1-FSDwrn_P-xnK3mPaLF9H6oSbn2V2elTPh56GbCYdq6fiOWYBQNjzATXsZ1gh3DFpqCYrWrOrbJuzzQuJDUmyMnN9NVjLYpNaQ3KLOBXrS1dHbPGMIDjg3NYHw4INxLXiONAh8j8DwLCS4xTXE4ww_L-UUn_8QLo5M"/>
+<p class="font-body-sm text-body-sm text-surface-variant max-w-xs mt-1">
+        Highway dhaba tradition preserving slow coal recipes, hand-churned dairy, and soulful hospitality on NH-19.
+      </p>
+</div>
+<!-- Operating Details & Contact -->
+<div class="grid grid-cols-2 gap-3 p-3.5 rounded-xl bg-surface-container-highest/10 text-left">
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] text-secondary-fixed uppercase font-semibold">Service Hours</span>
+<span class="font-label-lg text-label-lg font-bold text-surface mt-0.5">11 AM – 1:00 AM</span>
+<span class="font-body-sm text-[11px] text-surface-variant">Late Night Highway Feast</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] text-secondary-fixed uppercase font-semibold">Direct Helpline</span>
+<a class="font-label-lg text-label-lg font-bold text-surface mt-0.5 hover:underline" href="tel:09711863639">097118 63639</a>
+<span class="font-body-sm text-[11px] text-surface-variant">Instant Table &amp; Delivery</span>
+</div>
+</div>
+<!-- Hygiene & Quality Badges -->
+<div class="flex items-center justify-around py-2 border-t-0 bg-surface-container-highest/5 rounded-xl text-surface-variant">
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">verified</span>
+<span class="font-label-sm text-[10px]">100% Pure Veg</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">sanitizer</span>
+<span class="font-label-sm text-[10px]">Hygienic Kitchen</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">local_shipping</span>
+<span class="font-label-sm text-[10px]">Contactless Prep</span>
+</div>
+</div>
+<!-- Social & Copyright Bottom Bar -->
+<div class="flex flex-col items-center gap-2 pt-2 text-surface-dim font-label-sm text-[11px]">
+<p>© 2025 Desi Dhaba Faridabad. NH-19 Highway, Krishna Nagar, NIT.</p>
+<p class="text-surface-variant text-[10px]">बुरे काम का बुरा नतीजा, देसी ढाबा सदा सादा सीधा 🚛</p>
+</div>
+</footer>
+</div>
+<script>
+  // Simple micro-interaction for dish order notification
+  document.querySelectorAll('a[href^="tel:"]').forEach(cta => {
+    cta.addEventListener('click', () => {
+      // Gentle active tactile visual state feedback
+      cta.classList.add('opacity-80');
+      setTimeout(() => cta.classList.remove('opacity-80'), 300);
+    });
+  });
+</script></main><div class="fixed bottom-24 right-4 z-50 flex items-center"><a class="relative group flex items-center justify-center w-14 h-14 rounded-full bg-tertiary text-on-tertiary shadow-[0_8px_20px_rgba(28,89,0,0.35)] active:scale-95 transition-all" href="https://wa.me/919711863639" rel="noopener noreferrer" target="_blank"><span class="absolute -inset-1 rounded-full bg-secondary-container/40 animate-ping pointer-events-none"></span><span class="material-symbols-outlined text-[28px]">chat</span></a></div><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-4px_16px_rgba(40,24,15,0.06)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center w-16 h-full transition-colors text-primary font-bold" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">cottage</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center w-16 h-full text-on-surface-variant hover:text-primary transition-colors" data-path="full-menu" href="#"><span class="material-symbols-outlined text-[22px]">restaurant_menu</span><span class="font-label-sm text-label-sm mt-0.5">Menu</span></a><a class="flex flex-col items-center justify-center w-16 h-full text-on-surface-variant hover:text-primary transition-colors" data-path="village-experience" href="#"><span class="material-symbols-outlined text-[22px]">photo_camera</span><span class="font-label-sm text-label-sm mt-0.5">Gallery</span></a><a class="flex flex-col items-center justify-center w-16 h-full text-on-surface-variant hover:text-primary transition-colors" data-path="location-and-hours" href="#"><span class="material-symbols-outlined text-[22px]">near_me</span><span class="font-label-sm text-label-sm mt-0.5">Visit</span></a></div></nav></body></html>
